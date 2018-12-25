@@ -1,0 +1,81 @@
+* {
+	box-sizing: border-box;;
+}
+
+html {
+	width: 100%;
+	background-color: #ffa2a2;
+	font-size: 16px;
+}
+
+.calendar,
+.calendar > div {
+	display: flex;
+}
+
+.calendar {
+	flex-flow: row wrap;
+	width: 1400px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.calendar > div {
+	flex-flow: column;
+	flex: 0 1 350px;
+	height: 218px;
+	background-color: #fee4c9;
+}
+
+.calendar > div:nth-of-type(3n+2){
+	margin: 0 5px;
+}
+
+span.month {
+	display: inline-block;
+	text-align: center;
+	margin: 10px 0;
+}
+
+div.days{
+	display: flex;
+	flex-flow: row nowrap;
+	text-align: center;
+}
+
+.day_of_the_week {
+	display: inline-block;
+	flex: 1 1 14.28571428571429%; /*1)  1/7 *100% = 14.285711428571429*/
+}
+
+div.dates {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+div .date {
+	flex: 1 1 14.28571428571429%;
+	text-align: center;
+	align-self: flex-start;
+	display: inline-block;
+}
+
+/*div.date_hidden{
+	display: none;
+}*/
+
+/*div.dates span.date:nth-last-child(1),
+div.dates span.date:nth-last-child(2),
+div.dates span.date:nth-last-child(3),
+div.dates span.date:nth-last-child(4),
+div.dates span.date:nth-last-child(5),
+div.dates span.date:nth-last-child(6) {
+	justify-content: flex-start;
+	flex: 0 1 14.28571428571429%;
+}*/
+
+div.dates span.date:nth-last-child(n){
+	justify-content: flex-start;
+	flex: 0 1 14.28571428571429%;
+}
